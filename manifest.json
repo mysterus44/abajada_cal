@@ -1,0 +1,21 @@
+{
+  "name": "Calculateur Abjad",
+  "short_name": "Abjad",
+  "description": "Calculatrice numérique des lettres arabes (Abjad)",
+  "start_url": "./index.html",
+  "display": "standalone",
+  "background_color": "#f6f9fc",
+  "theme_color": "#0077cc",
+  "icons": [
+    {
+      "src": "logo.png",
+      "sizes": "192x192",
+      "type": "image/jpeg"
+    },
+    {
+      "src": "logo.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
+}
