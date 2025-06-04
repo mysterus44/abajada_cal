@@ -192,7 +192,7 @@
   // Scroll du textarea vers le haut lors du focus (mobile friendly)
 document.getElementById("texte").addEventListener("focus", function () {
   setTimeout(() => {
-    this.scrollIntoView({ behavior: "smooth", block: "center" });
+    this.scrollIntoView({ behavior: "smooth", block: "top" });
   }, 300); // léger délai pour attendre le clavier
 });
 
