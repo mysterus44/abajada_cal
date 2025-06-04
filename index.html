@@ -15,66 +15,68 @@
   <style>
     body {
       font-family: 'Tajawal', sans-serif;
-      background: #f6f9fc;
-      margin: 0;
-      padding: 0;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
+      background: #000b;
+      text-align: center;
     }
 
-    header {
-      text-align: center;
-      padding: 30px 15px 15px;
-      background-color: #0077cc;
-      color: white;
-      width: 100%;
-    }
+    header{
+      max-width: 900px;
+      margin: auto;
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      padding: 5px;
+      border-radius: 10px;
+  }
+  .description{
+    max-width: 900px;
+    max-height: 100px;
+    margin: auto;
+  }
 
     h1 {
-      font-size: 1.8rem;
-      margin: 0;
+      font-size: 20px;
+      margin: 20px 0;
+      color: #ec7906;
     }
 
     main {
-      max-width: 600px;
-      width: 90%;
-      background: white;
-      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-      padding: 20px;
-      margin: 20px;
-      border-radius: 15px;
+      max-width: 900px;
+      margin: auto;
+      background-color: #fff;
+      padding: 5px;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+      margin-bottom: 30px;
     }
-
+    a img{
+      
+      margin-left: 95px;
+    }
     textarea {
-      width: 100%;
+      width: 95%;
       height: 120px;
       font-size: 18px;
-      text-align: right;
-      direction: rtl;
-      padding: 12px;
-      border: 2px solid #ccc;
+      
+      text-align: center;
+      padding: 5px;
+      border: 2px solid #ec79069d;
       border-radius: 10px;
-      resize: none;
-      margin-bottom: 20px;
     }
 
     button {
       width: 100%;
-      background-color: #0077cc;
+      background-color: #ec7906;
       color: white;
       border: none;
+      margin-top: 15px;
       padding: 12px;
       font-size: 18px;
       border-radius: 10px;
       cursor: pointer;
-      transition: background 0.3s ease;
+      transition: 0.3s ease;
     }
-    a:hover{
-      color:green;
-      background-color:#fff;
-      border-color: green;
-    }
+    
 
     button:hover {
       background-color: #005fa3;
@@ -94,57 +96,38 @@
     }
 
     footer {
-      margin: 40px auto 10px;
       font-size: 14px;
       color: #888;
-      text-align: center;
+      padding: 10px;
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background-color: transparent;
     }
+    
 
-    @media (max-width: 600px) {
-      header h1 {
-        font-size: 1.5rem;
-      }
-      textarea {
-        height: 100px;
-        font-size: 16px;
-      }
-      button {
-        font-size: 16px;
-        padding: 10px;
-      }
-    }
+  
   </style>
 </head>
 <body>
-  <!-- Google AdSense Responsive Banner -->
-<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=pub-5254433934223993"
-crossorigin="anonymous"></script>
 
-<ins class="adsbygoogle"
-style="display:block; text-align:center;"
-data-ad-client="pub-5254433934223993"
-data-ad-slot="1234567890"
-data-ad-format="auto"
-data-full-width-responsive="true"></ins>
-
-<script>
-(adsbygoogle = window.adsbygoogle || []).push({});
-</script>
-  <header data-aos="fade-down">
-    <div style="display: flex; flex-direction:row;justify-content: space-around; text-align: center;">
-      <img style="height: 100px; width:100px; padding:3px; border:2px solid #ec7906; border-radius:25px; background-color:#fff;" src="logo.png" alt="Abjad">
-      <a style="width: 200px;color:#fff; height:30px; background-color:green; font-weight:bold; text-decoration:none; border:2px solid #fff; border-radius:8px; margin: 50px; text-align:center;" href="https://wa.me/2250586037221"><img src="whats.png" alt="contact"</a>
-    </div>
-    <h1>Calculateur de PM des les Lettres Arabes <br><br> حاسبة القيمة العددية للحروف العربية (أبجد)</h1>
+  <header>
+    <div><img style="height: 100px; width:100px; padding:3px; border:2px solid #ec7906; border-radius:25px; background-color:#fff;" src="logo.png" alt="Abjad"></div>
+    <div><a style="width: 200px; text-align:center;" href="https://wa.me/2250586037221"><img src="whats.png" alt="contact"></a></div>
   </header>
-
+  
+  <div class="description"><h1>Calculateur de PM des les Lettres Arabes <br> حاسبة القيمة العددية للحروف العربية (أبجد)</h1></div>
   <main data-aos="zoom-in">
-    <textarea id="texte" placeholder="أدخل النص الخاص بك - :Entrez votre texte ici..."></textarea>
-    <button onclick="calculerValeur()">احسب - Calculer</button>
+    <div><textarea id="texte" placeholder="النص هنا: texte ici:"></textarea></div>
+    <div><button onclick="calculerValeur()">احسب - Calculer</button></div>
     <div class="result" id="resultat"></div>
   </main>
 
-  <footer>&copy; 2025 Calculateur Abjad Par Kouda Mohammed Bouye. Tous droits réservés.</footer>
+  <footer>&copy; 2025 Calculateur Abjad Par <span style="color: #ec7906;">Kouda Mohammed Bouye.</span> Tous droits réservés.</footer>
 
   <script>
     const valeursAbjad = {
@@ -179,9 +162,9 @@ data-full-width-responsive="true"></ins>
         }
       }
 
-      let resultatHTML = `<p>Resultat Trouver ✅ القيمة العددية: <strong>${somme}</strong></p>`;
+      let resultatHTML = `<p>✅Resultat  القيمة العددية: <strong>${somme}</strong></p>`;
       if (lettresIgnorees.length > 0) {
-        resultatHTML += `<p class="ignored">Lettres Inconnues ❌ حروف غير معروفة: ${lettresIgnorees.join(' - ')}</p>`;
+        resultatHTML += `<p class="ignored">❌Lettres Inconnues حروف غير معروفة:   <span style="color: #000; font-weight:bold">${lettresIgnorees.join(' , ')}</span></p>`;
       }
 
       document.getElementById("resultat").innerHTML = resultatHTML;
